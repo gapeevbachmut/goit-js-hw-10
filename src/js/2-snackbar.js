@@ -14,12 +14,12 @@ function handleSubmit(event) {
   const state = form.elements.state.value; // обираємо  кнопку
 
   //   console.log(delay);
-  new Promise((resolve, regect) => {
+  new Promise((resolve, reject) => {
     setTimeout(() => {
       if (state === 'fulfilled') {
         resolve(delay);
       } else {
-        regect(delay);
+        reject(delay);
       }
     }, delay);
   })
